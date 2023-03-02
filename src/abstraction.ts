@@ -28,11 +28,29 @@ class Domestic extends Electricitybill{
         
     }
 
-   
+   public billdetail():any{
+
+   }
 
 
 }
+class Commercial extends Electricitybill{
+    constructor(rate:number,units:number){
+        super(rate,units);
 
+       
+
+    } 
+
+    public billdetails(): any{
+        var bill =(this.rate)*this.units;
+        return bill;
+        
+    }
+}
 let bills = new Domestic(5,3);
 console.log(bills.billdetails());
+
+let bil = new Commercial(3,9);
+console.log(bil.billdetails());
 
